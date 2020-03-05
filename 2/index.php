@@ -1,21 +1,34 @@
 <?php
-$str = $_POST['text'];
-function change($string){
-    $arr =str_split($string);
+if(isset($_POST["button"])){
+    $str = $_POST['text'];
+} else{
+    include "form.html";
+    return;
+}
+function generator($str){
     $count = 0;
-    foreach ($arr as &$i){
-        if($i == "h"){
-            $i = "4";
+    for ($i = 0; $i < strlen($str); $i++){
+        if($str[$i] == "h"){
+            yield"4";
             $count++;
-        } elseif ($i == "e" ){
-            $i = "3";
+        } elseif ($str[$i] == "e" ){
+            yield "3";
             $count++;
-        } elseif ($i == "o" ){
-            $i = "0";
+        } elseif ($str[$i] == "o" ){
+            yield "0";
             $count++;
+        } else {
+            yield $str[$i];
         }
     }
-    echo "Исходная строка: ".implode($arr);
-    echo " Всего замен: ".$count;
+    echo "    Всего изменений:".$count;
+}
+function change($str){
+    echo "Измененное слово:";
+    foreach (generator($str) as $newi){
+        echo $newi;
+    }
 }
 change($str);
+
+

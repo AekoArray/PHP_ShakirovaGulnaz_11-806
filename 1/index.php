@@ -1,10 +1,15 @@
 <?php
-$source = $_POST['textarea'];
+
+
+if(isset($_POST["button"])){
+    $source = $_POST['textarea'];
+    $chain =array_values(array_filter(preg_split('//', $_POST['text'])));
+} else{
+    include "form.html";
+    return;
+}
 //$source = "++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.>.";
 $source = array_values(array_filter(preg_split('//', $source)));
-
-
-$chain =array_values(array_filter(preg_split('//', $_POST['text'])));
 $cell = 0;
 $brackets = 0;
 for($i=0; $i<count($source); ++$i) {
