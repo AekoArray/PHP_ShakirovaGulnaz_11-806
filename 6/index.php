@@ -1,5 +1,5 @@
 <?php
-$ini = parse_ini_file("index.ini", INI_SCANNER_TYPED);
+$ini = parse_ini_file("index.ini", true,INI_SCANNER_TYPED);
 $file = fopen("file.txt", 'r');
 $array = array();
 while(!feof($file)){
