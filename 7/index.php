@@ -32,9 +32,11 @@ echo "<b>".$ping[$i]."</b>";
     echo "IP addresses:"."</br>";
     $sr = array();
             preg_match_all("/[0-9]{1,3}[.][0-9]{1,3}[.][0-9]{1,3}[.][0-9]{1,3}/", $tracert, $sr);
-            foreach ($sr as $value){
-                echo $value." ";
-            }
+    foreach ($sr as $value) {
+        foreach ($value as $item) {
+            print "<b>" . $item . "<b><br>";
+        }
+    }
 } else {
     echo "Выберите ping или tracert";
 }
