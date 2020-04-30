@@ -6,6 +6,11 @@ use exceptions\OrangeException;
 use exceptions\RedException;
 use exceptions\YellowException;
 
+require_once('exceptoins/BlueException.php');
+require_once('exceptoins/GreenException.php');
+require_once('exceptoins/OrangeException.php');
+require_once('exceptoins/RedException.php');
+require_once('exceptoins/YellowException.php');
 
 class ClassWith4Method
 {
