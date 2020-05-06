@@ -1,0 +1,8 @@
+{
+    "type": "text",
+    "time": "19:57:20",
+    "context": [
+        "Hi",
+        "json"
+    ]
+}
