@@ -27,13 +27,25 @@ class MainClassTest extends TestCase
             $mainClass = new MainClass(1,5);
             $mainClass2 = new MainClass(2,6);
             $mainClass->sub($mainClass2);
-            $this->assertEquals("()", $mainClass);
+            $this->assertFalse("(6,35)"== $mainClass);
         }
 
         function testDiv(){
             $mainClass = new MainClass(1,1);
             $mainClass2 = new MainClass(-2,1);
             $mainClass->div($mainClass2);
-            $this->assertFalse("(-0.2, 1.5)"== $mainClass);
+            $this->assertEquals("(-0.2,-0.6)", $mainClass->__toString());
+        }
+
+        function testAbs(){
+            $mainClass = new MainClass(3,6);
+            $mainClass->abs();
+            $this->assertNotSame("3", $mainClass);
+        }
+
+        function testToString(){
+            $mainClass = new MainClass(3,6);
+            $mainClass->__toString();
+            $this->assertEquals("(3,6)", $mainClass);
         }
 }
