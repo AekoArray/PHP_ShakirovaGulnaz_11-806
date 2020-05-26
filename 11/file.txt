@@ -1,8 +1,26 @@
-{
-    "type": "alert",
-    "time": "07:22:12",
-    "context": [
-        "Hi",
-        "alert"
-    ]
-}
+[
+    {
+        "type": "text",
+        "time": "14:09:25",
+        "context": [
+            "Hi",
+            "json"
+        ]
+    },
+    {
+        "type": "alert",
+        "time": "14:09:25",
+        "context": [
+            "Hi",
+            "alert"
+        ]
+    },
+    {
+        "type": "critical",
+        "time": "14:09:25",
+        "context": [
+            "Hi",
+            "critical"
+        ]
+    }
+]

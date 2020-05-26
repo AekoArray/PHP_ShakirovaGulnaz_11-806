@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1b2bf060777197584624dbc3b8101722",
+    "content-hash": "71acf3cc96665c8d1dff0e7c98a573c4",
     "packages": [],
     "packages-dev": [
         {
@@ -63,12 +63,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "ea01076169a5064278b10663cdca480cfcdcbca2"
+                "reference": "14e9ce759930ffa572815b0d0f09fffe3556344e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/ea01076169a5064278b10663cdca480cfcdcbca2",
-                "reference": "ea01076169a5064278b10663cdca480cfcdcbca2",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/14e9ce759930ffa572815b0d0f09fffe3556344e",
+                "reference": "14e9ce759930ffa572815b0d0f09fffe3556344e",
                 "shasum": ""
             },
             "require": {
@@ -111,7 +111,7 @@
                 "source": "https://github.com/squizlabs/PHP_CodeSniffer",
                 "wiki": "https://github.com/squizlabs/PHP_CodeSniffer/wiki"
             },
-            "time": "2020-05-05T00:30:01+00:00"
+            "time": "2020-05-15T01:01:29+00:00"
         }
     ],
     "aliases": [],
@@ -121,7 +121,9 @@
     },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "ext-json": "*"
+    },
     "platform-dev": {
         "ext-json": "*"
     },

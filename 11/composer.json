@@ -13,5 +13,8 @@
     "psr/log": "^1.1",
     "squizlabs/php_codesniffer": "4.0.x-dev",
     "ext-json": "*"
+  },
+  "require": {
+    "ext-json": "*"
   }
 }

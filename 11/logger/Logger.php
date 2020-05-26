@@ -6,10 +6,25 @@ use DateTime;
 
 class Logger implements LoggerInterface
 {
+    private $file;
+    private $array;
+
+    function __construct()
+    {
+        $this->file = fopen("file.txt", 'w');
+        $this->array = array();
+    }
+
+    function __destruct()
+    {
+        $json = json_encode($this->array, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+        fwrite($this->file, $json);
+        fclose($this->file);
+    }
 
     public function emergency($message, array $context = array())
     {
-
+        $this->log("emergency", $message, $context);
     }
 
     public function alert($message, array $context = array())
@@ -56,8 +71,6 @@ class Logger implements LoggerInterface
             'time' => $date,
             'context' => $context
         ];
-        $json = json_encode($data, JSON_PRETTY_PRINT);
-        $file = fopen("file.txt", 'w');
-        fwrite($file, $json);
+        array_push($this->array, $data);
     }
 }
