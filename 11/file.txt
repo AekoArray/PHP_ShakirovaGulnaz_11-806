@@ -1,8 +1,8 @@
 {
-    "type": "text",
-    "time": "19:57:20",
+    "type": "alert",
+    "time": "07:22:12",
     "context": [
         "Hi",
-        "json"
+        "alert"
     ]
 }
